@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do</title>
+    <link rel="stylesheet" type="text/css" href="What_We_Do.css" />
+    <link rel="stylesheet" type="text/css" href="../homepage/component.css" />
+    <script src="../homepage/modernizr.custom.js"></script>
+</head>
+<body>
+<header>
+    <img id="header_img" src="../tupiao.jpg" alt="Team Three Swordsman" title="Team Three Swordsman"/>
+    <p id="header_1">Team Three Swordsman</p>
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="sidebar">
+        <p>主页</p>
+        <p>WHAT WE DO</p>
+        <ul>
+            <li><a href="../WEB/WEB.html">WEB前端技术</a></li>
+            <li><a href="../database/database.html">后端及数据库编程</a></li>
+            <li><a href="../IOS/IOS.html">IOS编程</a></li>
+        </ul>
+        <p><a href="../about_us/about_us.html">关于我们</a></p>
+        <p><a href="../connect_us/connect_us.html">联系我们</a></p>
+        <p>博客</p>
+        <input type="text" id="select" value="请输入搜索内容" />
+        <input type="button" id="select_btn" value="搜索" />
+    </nav>
+    <div class="container">
+        <div class="main">
+            <section class="buttonset">
+                <p id="showRightPush">MENU</p>
+            </section>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <p id="header_2">WHAT WE DO</p>
+</header>
+
+<div id="main">
+    <div id="main_top">
+        <div id="main_top_left">
+           <ul id="main_top_ul">
+               <li>WEB前端编程及设计</li>
+               <li>IOS编程及设计</li>
+               <li>后端及数据库的编程及设计</li>
+           </ul>
+        </div>
+        <div id="main_top_right">
+            <p>完成每一行代码;优化每一行代码;成就每一行代码</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="main_bottom">
+            <div id="main_bottom_d1">
+                <img id="main_bottom_img1" src="#" alt="img1" />
+                <ul id="main_bottom_ul1">
+                    <li>WEB前端技术</li>
+                    <li><input id="main_bottom_btn1" type="button" value="查看更多" onclick="window.open('../WEB/WEB.html')" /></li>
+                </ul>
+            </div>
+            <div id="main_bottom_d2">
+                <img id="main_bottom_img2" src="#" alt="img2" />
+                <ul id="main_bottom_ul2">
+                    <li>IOS编程</li>
+                    <li><input id="main_bottom_btn2" type="button" value="查看更多" onclick="window.open('../IOS/IOS.html')" /></li>
+                </ul>
+            </div>
+            <div id="main_bottom_d3">
+                <img id="main_bottom_img3" src="#" alt="img3" />
+                <ul id="main_bottom_ul3">
+                    <li>后端及数据库编程</li>
+                    <li><input id="main_bottom_btn3" type="button" value="查看更多" onclick="window.open('../database/database.html')" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<footer>
+    <div id="foot_left">
+        <h2>社交联系</h2>
+        <p class="fontwhite">FOLLOW</p>
+        <ul id="footer_ul">
+            <li><a href="http://im.qq.com/" target="_blank">QQ</a></li>
+            <li><a href="http://weixin.qq.com/" target="_blank">微信</a></li>
+            <li><a href="http://weibo.com/" target="_blank">微博</a></li>
+        </ul>
+        <div class="clear"></div>
+        <p class="fontwhite">SHARE</p>
+        <a href="http://www.csdn.net/" target="_blank" id="csdn">CSDN</a>
+        <p>联系我们请拨打</p>
+        <p class="fontwhite">CN:+86XXXXXXXXXXX</p>
+        <p class="fontwhite">CN:+86XXXXXXXXXXX</p>
+        <p>Email</p>
+        <p>XXXXXX@outlook.com</p>
+        <p class="fontwhite">创立于2016年</p>
+    </div>
+    <div id="footer_right">
+        <p class="fontwhite">最新项目展示视频</p>
+        <video controls="controls" src=""></video>
+        <p class="fontwhite" id="rightfont">法律声明及隐私权政策</p>
+    </div>
+    <div class="clear"></div>
+    <p class="fontwhite" id="centerfont">Design By TS Team</p>
+</footer>
+
+<script src="../homepage/classie.js"></script>
+<script>
+    var menuRight = document.getElementById( 'sidebar' ),
+        showRightPush = document.getElementById( 'showRightPush' ),
+        body = document.body;
+
+    showRightPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toleft' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRightPush' );
+    };
+
+    function disableOther( button ) {
+        if( button !== 'showRightPush' ) {
+            classie.toggle( showRightPush, 'disabled' );
+        }
+    }
+</script>
+</body>
+</html>
